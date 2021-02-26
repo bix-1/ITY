@@ -11,4 +11,4 @@ zip:
 	zip $(LOGIN)-fit.zip *.tex Makefile
 
 clean:
-	rm -f $(NAME).{aux,dvi,log,pdf,ps} $(LOGIN)-fit.zip
+	rm -f $(NAME).{aux,dvi,log,pdf,ps,out} $(LOGIN)-fit.zip
