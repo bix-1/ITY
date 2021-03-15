@@ -4,6 +4,7 @@ LOGIN = xbartk07
 
 all:
 	pdflatex $(NAME)
+	pdflatex $(NAME)
 
 zip:
 	zip $(LOGIN)-fit.zip *.tex Makefile
