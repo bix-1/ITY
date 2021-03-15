@@ -3,9 +3,7 @@ NAME = proj2
 LOGIN = xbartk07
 
 all:
-	latex $(NAME).tex
-	dvips -t a4 $(NAME).dvi
-	ps2pdf $(NAME).ps
+	pdflatex $(NAME)
 
 zip:
 	zip $(LOGIN)-fit.zip *.tex Makefile

@@ -30,7 +30,7 @@ Jakub Bartko (xbartk07)}
 \end{titlepage}
 
 \section*{Úvod}
-V~této úloze si vyzkoušíme sazbu titulní strany, matematických vzorců, prostředí a~dalších textových struktur obvyklých pro technicky zaměřené texty (například rovnice~(\ref{eq:1}) nebo Definice~1~ na~straně~1). Rovněž si vyzkoušíme používání odkazů \verb|\ref| a~\verb|\pageref|.
+V~této úloze si vyzkoušíme sazbu titulní strany, matematických vzorců, prostředí a~dalších textových struktur obvyklých pro technicky zaměřené texty (například rovnice~(\ref{eq:one}) nebo Definice~\ref{def:one} na straně~\pageref{def:one}). Rovněž si vyzkoušíme používání odkazů \verb|\ref| a~\verb|\pageref|.
 
 Na titulní straně je využito sázení nadpisu podle optického středu s~využitím zlatého řezu. Tento postup byl probírán na přednášce. Dále je použito odřádkování se zadanou relativní velikostí 0.4\,em a~0.3\,em.
 
@@ -39,7 +39,7 @@ V~případě, že budete potřebovat vyjádřit matematickou konstrukci nebo sym
 \section{Matematický text}
 Nejprve se podíváme na sázení matematických symbolů a~výrazů v~plynulém textu včetně sazby definic a~vět s~využitím balíku \texttt{amsthm}. Rovněž použijeme poznámku pod čarou s~použitím příkazu \verb|\footnote|. Někdy je vhodné použít konstrukci \verb|\mbox{}|, která říká, že text nemá být zalomen.
 
-\begin{definition}
+\begin{definition}\label{def:one}
 {\normalfont Rozšířený zásobníkový automat} (RZA) je definován jako sedmice tvaru $A=(Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$, kde:
 \renewcommand\labelitemi{$\bullet$}
 \begin{itemize}
@@ -60,7 +60,7 @@ Nechť $P=(Q,\Sigma,\Gamma,\delta,q_0,Z_0,F)$ je rozšířený zásobníkový au
 je vrchol zásobníku}.
 
 \subsection{Podsekce obsahující větu a odkaz}
-\begin{definition}
+\begin{definition}\label{def:two}
 {\normalfont Řetězec $w$ nad abecedou $\Sigma$ je přijat RZA} $A$ jestliže $(q_0,w,Z_0) \overset{*}{\underset{A}\vdash} (q_F,\epsilon,\gamma)$ pro nějaké $\gamma\in\Gamma^\ast$ a $q_F\in F$. Množinu $L(A)=\{w\;|\;w\text{ je přijat RZA }A\} \subseteq\Sigma^\ast$ nazýváme \normalfont{jazyk přijímaný RZA} $A$.
 \end{definition}
 
@@ -71,7 +71,7 @@ Nyní si vyzkoušíme sazbu vět a~důkazů opět s~použitím balíku \texttt{a
 Třída jazyků, které jsou přijímány ZA, odpovídá \normalfont{bezkontextovým jazykům}.
 \end{sentence}
 \begin{proof}
-V~důkaze vyjdeme z~Definice~1~a~2.
+V~důkaze vyjdeme z~Definice~\ref{def:one}~a~\ref{def:two}.
 \end{proof}
 
 \section{Rovnice a odkazy}
@@ -80,10 +80,10 @@ text. Lze umístit několik výrazů na jeden řádek, ale pak je třeba tyto vh
 
 \[\sqrt[i]{x^3_i}\quad\text{kde } x_i \text{ je } i\text{-té sudé číslo splňující}\quad x_i^{x_i^{i^2}+2}\leq y_i^{x_i^4}\]
 
-V~rovnici~(1) jsou využity tři typy závorek s~různou
+V~rovnici~(\ref{eq:one}) jsou využity tři typy závorek s~různou
 explicitně definovanou velikostí.
 \begin{eqnarray}
-    x &=& \bigg[\Big\{\big[a+b\big]*c\Big\}^d\oplus2\bigg]^{3/2}\label{eq:1} \\
+    x &=& \bigg[\Big\{\big[a+b\big]*c\Big\}^d\oplus2\bigg]^{3/2}\label{eq:one} \\
     y &=& \lim_{x\to\infty} \frac{\frac{1}{\log_{10}x}}{\sin^2x + \cos^2x} \nonumber
 \end{eqnarray}
 
