@@ -9,7 +9,7 @@ all:
 	ps2pdf -sPAPERSIZE=a4 $(NAME).ps
 
 zip:
-	zip $(LOGIN)-fit.zip *.tex Makefile
+	zip $(LOGIN)-fit.zip *.tex *.eps Makefile
 
 cmp:
 	pdftk proj3.pdf multibackground assignment/proj3.pdf output overlay.pdf
