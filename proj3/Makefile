@@ -11,5 +11,8 @@ all:
 zip:
 	zip $(LOGIN)-fit.zip *.tex Makefile
 
+cmp:
+	pdftk proj3.pdf multibackground assignment/proj3.pdf output overlay.pdf
+
 clean:
 	rm -f $(NAME).{aux,dvi,log,pdf,ps,out} $(LOGIN)-fit.zip
