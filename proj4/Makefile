@@ -9,7 +9,7 @@ all:
 	pdflatex $(NAME)
 
 zip:
-	zip $(LOGIN)-fit.zip *.tex Makefile
+	zip $(LOGIN)-fit.zip *.tex *.bib *.bst Makefile
 
 clean:
 	rm -f *.{bbl,blg,aux,dvi,log,pdf,ps,out} $(LOGIN)-fit.zip
