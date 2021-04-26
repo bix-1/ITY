@@ -9,7 +9,7 @@ all:
 	pdflatex $(NAME).tex
 
 zip:
-	zip $(LOGIN)-fit.zip *.tex *.eps Makefile img/
+	zip -r $(LOGIN)-fit.zip *.tex *.eps Makefile img
 
 clean:
 	rm -f $(NAME).{aux,dvi,log,ps,out,nav,snm,toc} $(LOGIN)-fit.zip
