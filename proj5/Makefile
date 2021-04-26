@@ -5,10 +5,8 @@ LOGIN = xbartk07
 .PHONY: clean
 
 all:
-	latex $(NAME).tex
-	latex $(NAME).tex
-	dvips $(NAME).dvi
-	ps2pdf $(NAME).ps
+	pdflatex $(NAME).tex
+	pdflatex $(NAME).tex
 
 zip:
 	zip $(LOGIN)-fit.zip *.tex *.eps Makefile img/
